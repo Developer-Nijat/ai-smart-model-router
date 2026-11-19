@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title">
+  <title id="title">Smart Model Router</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#231b17"/>
+      <stop offset="1" stop-color="#120f0d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.3" cy="0.5" r="0.55">
+      <stop offset="0" stop-color="#d97757" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#d97757" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="src" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0a382"/>
+      <stop offset="1" stop-color="#d97757"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+  <rect width="1024" height="1024" rx="224" fill="url(#glow)"/>
+  <rect x="6" y="6" width="1012" height="1012" rx="218" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="12"/>
+
+  <!-- branches: one input, three models -->
+  <g fill="none" stroke-linecap="round" stroke-width="56">
+    <path d="M300 512 C 470 512, 500 292, 700 292" stroke="#4ade80"/>
+    <path d="M300 512 H 700" stroke="#60a5fa"/>
+    <path d="M300 512 C 470 512, 500 732, 700 732" stroke="#f59e0b"/>
+  </g>
+
+  <!-- model nodes -->
+  <g>
+    <circle cx="742" cy="292" r="84" fill="#4ade80" opacity="0.35" filter="url(#soft)"/>
+    <circle cx="742" cy="512" r="84" fill="#60a5fa" opacity="0.35" filter="url(#soft)"/>
+    <circle cx="742" cy="732" r="84" fill="#f59e0b" opacity="0.35" filter="url(#soft)"/>
+    <circle cx="742" cy="292" r="70" fill="#1a2a1f" stroke="#4ade80" stroke-width="28"/>
+    <circle cx="742" cy="512" r="70" fill="#1a2233" stroke="#60a5fa" stroke-width="28"/>
+    <circle cx="742" cy="732" r="70" fill="#2c2114" stroke="#f59e0b" stroke-width="28"/>
+  </g>
+
+  <!-- the router: source node -->
+  <circle cx="276" cy="512" r="120" fill="#d97757" opacity="0.4" filter="url(#soft)"/>
+  <circle cx="276" cy="512" r="108" fill="url(#src)"/>
+  <path d="M232 470 L290 512 L232 554" fill="none" stroke="#1c1512" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
