@@ -1,0 +1,52 @@
+{
+  "name": "smart-model-router",
+  "version": "0.1.0",
+  "description": "Smart Model Router: picks the Claude model and effort for each turn and subagent",
+  "license": "MIT",
+  "homepage": "https://github.com/Developer-Nijat/ai-smart-model-router",
+  "repository": "https://github.com/Developer-Nijat/ai-smart-model-router",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "defaultMode": {
+      "type": "string",
+      "title": "Routing mode",
+      "description": "shadow records recommendations only; auto applies them; off disables the router",
+      "default": "shadow",
+      "options": ["shadow", "auto", "off"]
+    },
+    "privacyMode": {
+      "type": "string",
+      "title": "Privacy mode",
+      "description": "local-only never sends the prompt to a classifier; cloud-ai or hybrid allow the AI classifier",
+      "default": "local-only",
+      "options": ["local-only", "local-ai", "cloud-ai", "hybrid"]
+    },
+    "aiClassifier": {
+      "type": "string",
+      "title": "AI classifier",
+      "description": "on: unclear prompts are classified by Haiku on this session's access (needs privacy cloud-ai or hybrid)",
+      "default": "off",
+      "options": ["off", "on"]
+    },
+    "liveMessages": {
+      "type": "string",
+      "title": "Live routing messages",
+      "description": "on: a line in the transcript and the band above the prompt when a turn is routed; band: the band only; off: none",
+      "default": "on",
+      "options": ["on", "band", "off"]
+    },
+    "daemonUrl": {
+      "type": "string",
+      "title": "Daemon URL",
+      "description": "Where decisions are recorded (mr start); loopback only",
+      "default": "http://127.0.0.1:4747"
+    },
+    "daemonToken": {
+      "type": "string",
+      "title": "Daemon token",
+      "description": "Printed by mr init; without it decisions stay buffered in the mod",
+      "default": "",
+      "sensitive": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@smr/storage",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SQLite persistence (node:sqlite), migrations and repositories.",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@smr/shared": "0.1.0"
+  }
+}

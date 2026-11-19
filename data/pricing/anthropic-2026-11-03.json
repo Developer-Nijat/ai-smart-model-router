@@ -1,0 +1,43 @@
+[
+  {
+    "modelId": "anthropic.claude-haiku",
+    "inputPerMillion": 0.1,
+    "outputPerMillion": 0.5,
+    "cacheReadPerMillion": null,
+    "cacheWritePerMillion": null,
+    "longContext": { "thresholdTokens": 100000, "inputPerMillion": 0.5, "outputPerMillion": 2.5 },
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+    "asOf": "2026-11-03",
+    "notes": "First-party API rates for prompts up to 100K tokens; cache rates not recorded in the cached reference."
+  },
+  {
+    "modelId": "anthropic.claude-sonnet",
+    "inputPerMillion": 2,
+    "outputPerMillion": 10,
+    "cacheReadPerMillion": 0.1,
+    "cacheWritePerMillion": null,
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+    "asOf": "2026-11-03",
+    "notes": "First-party API rates; cache write rate not recorded in the cached reference."
+  },
+  {
+    "modelId": "anthropic.claude-opus",
+    "inputPerMillion": 4,
+    "outputPerMillion": 20,
+    "cacheReadPerMillion": 0.2,
+    "cacheWritePerMillion": null,
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+    "asOf": "2026-11-03",
+    "notes": "First-party API rates, standard speed; cache write rate not recorded in the cached reference."
+  },
+  {
+    "modelId": "anthropic.claude-fable",
+    "inputPerMillion": 8,
+    "outputPerMillion": 40,
+    "cacheReadPerMillion": 0.2,
+    "cacheWritePerMillion": null,
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+    "asOf": "2026-11-03",
+    "notes": "First-party API rates, standard speed; cache write rate not recorded in the cached reference."
+  }
+]

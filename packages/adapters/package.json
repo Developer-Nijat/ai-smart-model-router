@@ -1,0 +1,11 @@
+{
+  "name": "@smr/adapters",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Agent adapter contract, capability reporting and per-agent adapters.",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@smr/shared": "0.1.0"
+  }
+}

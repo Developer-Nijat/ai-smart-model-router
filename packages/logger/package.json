@@ -1,0 +1,11 @@
+{
+  "name": "@smr/logger",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Structured JSON logger with secret and prompt redaction.",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@smr/shared": "0.1.0"
+  }
+}

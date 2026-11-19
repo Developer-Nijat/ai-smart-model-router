@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "labels": "Hand-assigned by the project (2026-11-19) before the router saw them: a held-out check for rule changes tuned on prompts.json. Not used for tuning.",
+  "prompts": [
+    { "id": "h-title", "lang": "en", "expected": "haiku", "text": "Update the page title to Dashboard" },
+    { "id": "h-unused-var", "lang": "en", "expected": "haiku", "text": "Remove the unused variable count in utils.js" },
+    { "id": "h-spelling", "lang": "en", "expected": "haiku", "text": "Fix the spelling of recieve in the error message" },
+    { "id": "h-color-az", "lang": "az", "expected": "haiku", "text": "Düymənin rəngini yaşıl et" },
+    { "id": "h-pagination", "lang": "en", "expected": "sonnet", "text": "Add pagination to the users list endpoint" },
+    { "id": "h-unit-tests", "lang": "en", "expected": "sonnet", "text": "Write unit tests for the date formatter" },
+    { "id": "h-double-submit", "lang": "en", "expected": "sonnet", "text": "Fix the bug where the form submits twice" },
+    { "id": "h-link-az", "lang": "az", "expected": "sonnet", "text": "Login səhifəsinə şifrəni unutdum linki əlavə et" },
+    { "id": "h-zero-downtime", "lang": "en", "expected": "opus", "text": "Migrate the orders table to a new schema without downtime" },
+    { "id": "h-leak", "lang": "en", "expected": "opus", "text": "Find and fix the memory leak in the websocket server" },
+    { "id": "h-purge", "lang": "en", "expected": "opus", "text": "Purge the expired sessions from the production database" },
+    { "id": "h-auth-az", "lang": "az", "expected": "opus", "text": "Bütün servislər arasında autentifikasiyanı yenidən dizayn et" }
+  ]
+}

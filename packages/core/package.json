@@ -1,0 +1,11 @@
+{
+  "name": "@smr/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pure routing core: classification, rules, selection. No I/O, no global state (ADR-001).",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@smr/shared": "0.1.0"
+  }
+}

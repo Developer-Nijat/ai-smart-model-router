@@ -1,0 +1,67 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  # Lint, every test with coverage, the release package and its smoke test on each OS.
+  # The dashboard's UI tests use jsdom, which needs Node 22.22+: development runs here.
+  test:
+    name: test ${{ matrix.os }} / node ${{ matrix.node }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: ['22', '24']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      # plugins/ is what the marketplace installs: it must match the mod's source.
+      - run: npm run build:plugin
+      - run: git diff --exit-code -- plugins/
+      - run: npm run build:dashboard
+      - run: npm run coverage
+      # The self-contained package, installed into a temporary npm prefix and driven
+      # as a person would (daemon on port 3106, temporary SMR_HOME).
+      - run: npm run release
+      - run: node scripts/smoke-release.js
+      - uses: actions/upload-artifact@v4
+        if: matrix.os == 'ubuntu-latest' && matrix.node == '22'
+        with:
+          name: release-package
+          path: release/*.tgz
+
+  # The oldest Node the program supports (engines: >=22.13): install the package built
+  # above and run it. No dev tooling runs here.
+  minimum-node:
+    name: run on node 22.13 / ${{ matrix.os }}
+    needs: test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-package
+          path: release
+      - run: node scripts/smoke-release.js

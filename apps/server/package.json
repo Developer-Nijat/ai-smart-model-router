@@ -1,0 +1,20 @@
+{
+  "name": "@smr/server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local Smart Model Router daemon: stores what agent integrations report (ADR-003). Loopback only.",
+  "main": "src/app.js",
+  "bin": {
+    "smr-server": "bin/smr-server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@smr/adapters": "0.1.0",
+    "@smr/config": "0.1.0",
+    "@smr/core": "0.1.0",
+    "@smr/logger": "0.1.0",
+    "@smr/shared": "0.1.0",
+    "@smr/storage": "0.1.0",
+    "fastify": "^5.12.8"
+  }
+}

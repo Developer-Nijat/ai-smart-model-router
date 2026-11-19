@@ -1,0 +1,11 @@
+{
+  "name": "@smr/config",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Settings location, loading, validation and atomic saving.",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@smr/shared": "0.1.0"
+  }
+}

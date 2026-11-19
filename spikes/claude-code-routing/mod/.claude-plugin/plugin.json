@@ -1,0 +1,15 @@
+{
+  "name": "smr-spike",
+  "version": "0.1.0",
+  "description": "Smart Model Router feasibility spike: per-turn model routing via turn.step",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "defaultMode": {
+      "type": "string",
+      "title": "Default routing mode",
+      "description": "shadow records recommendations only; auto applies them; off disables the router",
+      "default": "shadow",
+      "options": ["shadow", "auto", "off"]
+    }
+  }
+}

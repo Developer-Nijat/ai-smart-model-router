@@ -1,0 +1,14 @@
+node_modules/
+coverage/
+dist/
+logs/
+*.log
+*.db
+*.db-wal
+*.db-shm
+*.bak-*
+.env
+.env.*
+.DS_Store
+.claude/settings.local.json
+release/

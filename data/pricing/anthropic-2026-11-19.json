@@ -1,0 +1,43 @@
+[
+  {
+    "modelId": "anthropic.claude-haiku",
+    "inputPerMillion": 0.1,
+    "outputPerMillion": 0.5,
+    "cacheReadPerMillion": 0.01,
+    "cacheWritePerMillion": 0.125,
+    "longContext": { "thresholdTokens": 100000, "inputPerMillion": 0.5, "outputPerMillion": 2.5, "cacheReadPerMillion": 0.05, "cacheWritePerMillion": 0.625 },
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+    "asOf": "2026-11-19",
+    "notes": "First-party API, global routing. Cache writes at the 5-minute rate (1-hour writes: 0.20, long 1.00): agent usage does not split them, so cost is a lower bound when 1-hour caching is used. Prompt length for the 100K threshold includes cache reads and writes."
+  },
+  {
+    "modelId": "anthropic.claude-sonnet",
+    "inputPerMillion": 2,
+    "outputPerMillion": 10,
+    "cacheReadPerMillion": 0.1,
+    "cacheWritePerMillion": 2.5,
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+    "asOf": "2026-11-19",
+    "notes": "First-party API, global routing. Cache writes at the 5-minute rate (1-hour writes: 4); cost is a lower bound when 1-hour caching is used."
+  },
+  {
+    "modelId": "anthropic.claude-opus",
+    "inputPerMillion": 4,
+    "outputPerMillion": 20,
+    "cacheReadPerMillion": 0.2,
+    "cacheWritePerMillion": 5,
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+    "asOf": "2026-11-19",
+    "notes": "First-party API, global routing, standard speed. Cache writes at the 5-minute rate (1-hour writes: 8); cost is a lower bound when 1-hour caching is used."
+  },
+  {
+    "modelId": "anthropic.claude-fable",
+    "inputPerMillion": 8,
+    "outputPerMillion": 40,
+    "cacheReadPerMillion": 0.2,
+    "cacheWritePerMillion": 10,
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+    "asOf": "2026-11-19",
+    "notes": "First-party API, global routing, standard speed. Cache writes at the 5-minute rate (1-hour writes: 16); cost is a lower bound when 1-hour caching is used."
+  }
+]

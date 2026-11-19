@@ -1,0 +1,65 @@
+{
+  "source": "Anthropic models overview (claude-api reference, cached 2026-11-03): https://platform.claude.com/docs/en/about-claude/models/overview.md",
+  "providers": [
+    { "id": "anthropic", "displayName": "Anthropic", "kind": "cloud" }
+  ],
+  "models": [
+    {
+      "id": "anthropic.claude-haiku",
+      "provider": "anthropic",
+      "displayName": "Claude Haiku 5.5",
+      "family": "haiku",
+      "aliases": ["haiku", "claude-haiku-5-5"],
+      "tier": 1,
+      "capabilities": { "coding": true, "reasoning": true, "vision": true, "toolUse": true },
+      "supportedEffort": ["low", "medium", "high", "xhigh", "max"],
+      "defaultEffort": "medium",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "agentModelIds": { "claude-code": "haiku" }
+    },
+    {
+      "id": "anthropic.claude-sonnet",
+      "provider": "anthropic",
+      "displayName": "Claude Sonnet 5.5",
+      "family": "sonnet",
+      "aliases": ["sonnet", "claude-sonnet-5-5"],
+      "tier": 2,
+      "capabilities": { "coding": true, "reasoning": true, "vision": true, "toolUse": true },
+      "supportedEffort": ["low", "medium", "high", "xhigh", "max"],
+      "defaultEffort": "high",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "agentModelIds": { "claude-code": "sonnet" }
+    },
+    {
+      "id": "anthropic.claude-opus",
+      "provider": "anthropic",
+      "displayName": "Claude Opus 5.5",
+      "family": "opus",
+      "aliases": ["opus", "claude-opus-5-5"],
+      "tier": 3,
+      "capabilities": { "coding": true, "reasoning": true, "vision": true, "toolUse": true },
+      "supportedEffort": ["low", "medium", "high", "xhigh", "max"],
+      "defaultEffort": "medium",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "agentModelIds": { "claude-code": "opus" }
+    },
+    {
+      "id": "anthropic.claude-fable",
+      "provider": "anthropic",
+      "displayName": "Claude Fable 5.2",
+      "family": "fable",
+      "aliases": ["fable", "claude-fable-5-2"],
+      "tier": 4,
+      "capabilities": { "coding": true, "reasoning": true, "vision": true, "toolUse": true },
+      "supportedEffort": ["low", "medium", "high", "xhigh", "max"],
+      "defaultEffort": null,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "agentModelIds": { "claude-code": "claude-fable-5-2" },
+      "status": "disabled"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "smart-model-router",
+  "owner": { "name": "Smart Model Router" },
+  "metadata": {
+    "description": "Picks the Claude model and reasoning effort for each Claude Code turn and subagent."
+  },
+  "plugins": [
+    {
+      "name": "smart-model-router",
+      "source": "./plugins/smart-model-router",
+      "description": "Routes each turn and subagent to the cheapest Claude model that fits the task: shadow mode by default, /route to control it, live routing messages.",
+      "license": "MIT"
+    }
+  ]
+}

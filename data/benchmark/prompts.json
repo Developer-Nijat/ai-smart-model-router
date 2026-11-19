@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "labels": "Hand-assigned by the project (2026-11-19): the cheapest Claude tier expected to do the task well. A judgement, not a measurement; replace or extend with your own prompts.",
+  "prompts": [
+    { "id": "typo-en", "lang": "en", "expected": "haiku", "text": "Fix the typo in the word 'recieve' in README.md" },
+    { "id": "rename-var", "lang": "en", "expected": "haiku", "text": "Rename the variable usr to user in src/profile.js" },
+    { "id": "what-is", "lang": "en", "expected": "haiku", "text": "What does the --force flag of npm install do?" },
+    { "id": "explain-func", "lang": "en", "expected": "haiku", "text": "Explain what the parseDate function in utils/date.js returns" },
+    { "id": "comment", "lang": "en", "expected": "haiku", "text": "Add a JSDoc comment to the formatPrice function" },
+    { "id": "button-color", "lang": "en", "expected": "haiku", "text": "Change the submit button color to blue" },
+    { "id": "unused-import", "lang": "en", "expected": "haiku", "text": "Delete the unused import in src/app.ts" },
+    { "id": "typo-az", "lang": "az", "expected": "haiku", "text": "README faylında yazım səhvini düzəlt" },
+    { "id": "question-az", "lang": "az", "expected": "haiku", "text": "Bu funksiyanın nə etdiyini izah et" },
+    { "id": "small-az", "lang": "az", "expected": "haiku", "text": "Düymənin rəngini dəyiş, kiçik dəyişiklikdir" },
+
+    { "id": "bug-null", "lang": "en", "expected": "sonnet", "text": "Fix the bug where the cart total shows NaN when a product has no price" },
+    { "id": "endpoint", "lang": "en", "expected": "sonnet", "text": "Add a REST endpoint that exports the monthly report as CSV" },
+    { "id": "unit-tests", "lang": "en", "expected": "sonnet", "text": "Write unit tests for the invoice service, covering discounts and taxes" },
+    { "id": "refactor-module", "lang": "en", "expected": "sonnet", "text": "Refactor the order controller to extract the validation into its own module" },
+    { "id": "form-validation", "lang": "en", "expected": "sonnet", "text": "Implement form validation for the signup page with error messages" },
+    { "id": "pagination", "lang": "en", "expected": "sonnet", "text": "Add pagination to the users list API and the table that shows it" },
+    { "id": "crash-trace", "lang": "en", "expected": "sonnet", "text": "The app crashes with this stack trace when I open settings, fix it: TypeError: cannot read properties of undefined (reading 'theme')" },
+    { "id": "ci-config", "lang": "en", "expected": "sonnet", "text": "Set up a GitHub Actions pipeline that runs lint and tests on every pull request" },
+    { "id": "feature-az", "lang": "az", "expected": "sonnet", "text": "Sifarişlər səhifəsinə tarixə görə filtr əlavə et" },
+    { "id": "bug-az", "lang": "az", "expected": "sonnet", "text": "Login işləmir, istifadəçi şifrəni düzgün yazanda da xəta çıxır, düzəlt" },
+
+    { "id": "security-audit", "lang": "en", "expected": "opus", "text": "Audit the authentication flow for injection and session fixation vulnerabilities" },
+    { "id": "architecture", "lang": "en", "expected": "opus", "text": "Design the architecture for splitting the monolith into services with a shared event bus" },
+    { "id": "race", "lang": "en", "expected": "opus", "text": "Find and fix the race condition that sometimes double-charges a payment under concurrent requests" },
+    { "id": "migration", "lang": "en", "expected": "opus", "text": "Plan and write the database migration that splits the users table into accounts and profiles without downtime" },
+    { "id": "prod-data", "lang": "en", "expected": "opus", "text": "Write a script to delete the duplicate records in the production database" },
+    { "id": "perf-wide", "lang": "en", "expected": "opus", "text": "Investigate the memory leak across all services and fix its root cause" },
+    { "id": "crypto", "lang": "en", "expected": "opus", "text": "Review our token encryption and key rotation for security weaknesses" },
+    { "id": "security-az", "lang": "az", "expected": "opus", "text": "Ödəniş modulunda təhlükəsizlik zəifliklərini yoxla və düzəlt" },
+    { "id": "architecture-az", "lang": "az", "expected": "opus", "text": "Bütün layihə üçün yeni arxitektura təklif et: modullar, verilənlər bazası və keş" },
+    { "id": "data-az", "lang": "az", "expected": "opus", "text": "Canlı bazadakı köhnə məlumatları sil və miqrasiya yaz" }
+  ]
+}
