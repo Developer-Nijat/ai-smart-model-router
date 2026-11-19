@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Smart Model Router for Claude Code</title>
+  <desc id="desc">Smart Model Router routes each Claude Code turn to Haiku, Sonnet or Opus and shows each decision live in the terminal.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16120f"/>
+      <stop offset="0.55" stop-color="#1c1714"/>
+      <stop offset="1" stop-color="#241a15"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.18" r="0.6">
+      <stop offset="0" stop-color="#d97757" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#d97757" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.08" cy="0.95" r="0.5">
+      <stop offset="0" stop-color="#5b8def" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#5b8def" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e8946f"/>
+      <stop offset="1" stop-color="#d97757"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <clipPath id="term">
+      <rect x="640" y="96" width="584" height="452" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <rect width="1280" height="640" fill="url(#glow)"/>
+  <rect width="1280" height="640" fill="url(#glow2)"/>
+
+  <!-- left: brand -->
+  <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
+    <g transform="translate(64 104)">
+      <rect width="196" height="30" rx="15" fill="#d97757" fill-opacity="0.14" stroke="#d97757" stroke-opacity="0.45"/>
+      <circle cx="18" cy="15" r="4" fill="#d97757"/>
+      <text x="30" y="20" font-size="13" font-weight="600" fill="#f0b39a" letter-spacing="0.6">CLAUDE CODE PLUGIN</text>
+    </g>
+
+    <text x="62" y="208" font-size="58" font-weight="700" fill="#f7f1ec" letter-spacing="-1.2">Smart Model</text>
+    <text x="62" y="272" font-size="58" font-weight="700" fill="url(#accent)" letter-spacing="-1.2">Router</text>
+
+    <text x="64" y="324" font-size="21" fill="#c9bdb3">The right Claude model and effort</text>
+    <text x="64" y="352" font-size="21" fill="#c9bdb3">for every turn, chosen live.</text>
+
+    <!-- tiers -->
+    <g transform="translate(64 392)" font-size="14">
+      <g>
+        <rect width="150" height="64" rx="12" fill="#1f2a22" stroke="#4ade80" stroke-opacity="0.45"/>
+        <text x="16" y="27" font-size="17" font-weight="700" fill="#86efac">Haiku</text>
+        <text x="16" y="48" fill="#9fb7a6">typos · questions</text>
+      </g>
+      <g transform="translate(166 0)">
+        <rect width="150" height="64" rx="12" fill="#1d2433" stroke="#60a5fa" stroke-opacity="0.45"/>
+        <text x="16" y="27" font-size="17" font-weight="700" fill="#93c5fd">Sonnet</text>
+        <text x="16" y="48" fill="#a3b1c7">features · tests</text>
+      </g>
+      <g transform="translate(332 0)">
+        <rect width="150" height="64" rx="12" fill="#2d2216" stroke="#f59e0b" stroke-opacity="0.5"/>
+        <text x="16" y="27" font-size="17" font-weight="700" fill="#fcd34d">Opus</text>
+        <text x="16" y="48" fill="#c4b49c">races · security</text>
+      </g>
+    </g>
+
+    <!-- facts -->
+    <g transform="translate(64 500)" font-size="14" fill="#a89a8f">
+      <text x="0" y="0"><tspan fill="#f0b39a">●</tspan>  shadow mode by default</text>
+      <text x="0" y="26"><tspan fill="#f0b39a">●</tspan>  cache-aware switching</text>
+      <text x="236" y="0"><tspan fill="#f0b39a">●</tspan>  local-only, prompt never stored</text>
+      <text x="236" y="26"><tspan fill="#f0b39a">●</tspan>  /route explain for every decision</text>
+    </g>
+  </g>
+
+  <!-- right: terminal -->
+  <g filter="url(#shadow)">
+    <rect x="640" y="96" width="584" height="452" rx="14" fill="#0f0d0c" stroke="#3a302a"/>
+  </g>
+  <g clip-path="url(#term)">
+    <rect x="640" y="96" width="584" height="40" fill="#1b1714"/>
+    <rect x="640" y="135" width="584" height="1" fill="#2e2621"/>
+    <circle cx="664" cy="116" r="6" fill="#ff5f57"/>
+    <circle cx="684" cy="116" r="6" fill="#febc2e"/>
+    <circle cx="704" cy="116" r="6" fill="#28c840"/>
+    <text x="932" y="121" text-anchor="middle" font-family="'Segoe UI', -apple-system, Arial, sans-serif" font-size="13" fill="#8a7d73">claude · ~/my-app</text>
+
+    <g font-family="'Cascadia Code', 'SFMono-Regular', Consolas, Menlo, 'Liberation Mono', monospace" font-size="15">
+      <!-- turn 1 -->
+      <text x="664" y="174" fill="#8a7d73">❯ <tspan fill="#ece4dc">Fix the typo in README</tspan></text>
+      <text x="664" y="200"><tspan fill="#4ade80" font-weight="700">▼</tspan><tspan fill="#7c6f66"> router · </tspan><tspan fill="#86efac" font-weight="700">opus → haiku/low</tspan><tspan fill="#7c6f66"> · light bug fix</tspan></text>
+
+      <!-- turn 2 -->
+      <text x="664" y="246" fill="#8a7d73">❯ <tspan fill="#ece4dc">Add pagination to GET /users</tspan></text>
+      <text x="664" y="272"><tspan fill="#facc15" font-weight="700">▲</tspan><tspan fill="#7c6f66"> router · </tspan><tspan fill="#fde68a" font-weight="700">haiku → sonnet/medium</tspan><tspan fill="#7c6f66"> · standard feature</tspan></text>
+
+      <!-- turn 3 -->
+      <text x="664" y="318" fill="#8a7d73">❯ <tspan fill="#ece4dc">Fix the race condition in the writer</tspan></text>
+      <text x="664" y="344"><tspan fill="#facc15" font-weight="700">▲</tspan><tspan fill="#7c6f66"> router · </tspan><tspan fill="#fde68a" font-weight="700">sonnet → opus/high</tspan><tspan fill="#7c6f66"> · heavy bug fix</tspan></text>
+      <text x="682" y="366" fill="#7c6f66">needs deeper reasoning</text>
+
+      <!-- explain -->
+      <text x="664" y="410" fill="#8a7d73">❯ <tspan fill="#f0b39a">/route explain</tspan></text>
+      <text x="682" y="434" fill="#b3a69b" font-size="14">bug_fix · complexity 0.6 · reasoning high</text>
+      <text x="682" y="454" fill="#b3a69b" font-size="14">→ opus 0.62 <tspan fill="#7c6f66">· sonnet 0.48 · haiku -0.09</tspan></text>
+    </g>
+
+    <!-- live band above the prompt -->
+    <rect x="656" y="474" width="552" height="30" rx="7" fill="#facc15" fill-opacity="0.08" stroke="#facc15" stroke-opacity="0.35"/>
+    <text x="670" y="494" font-family="'Cascadia Code', 'SFMono-Regular', Consolas, Menlo, monospace" font-size="14"><tspan fill="#facc15" font-weight="700">▲ </tspan><tspan fill="#8a7d73">router </tspan><tspan fill="#fde68a" font-weight="700">opus/high</tspan><tspan fill="#7c6f66"> · heavy bug fix · needs deeper reasoning</tspan></text>
+
+    <!-- prompt -->
+    <rect x="656" y="512" width="552" height="1" fill="#3a302a"/>
+    <text x="664" y="536" font-family="'Cascadia Code', 'SFMono-Regular', Consolas, Menlo, monospace" font-size="15" fill="#d97757">❯ <tspan fill="#5d524b">_</tspan></text>
+  </g>
+
+  <!-- footer: install -->
+  <g font-family="'Cascadia Code', 'SFMono-Regular', Consolas, Menlo, monospace" font-size="14">
+    <rect x="64" y="572" width="1160" height="40" rx="10" fill="#d97757" fill-opacity="0.10" stroke="#d97757" stroke-opacity="0.4"/>
+    <text x="84" y="597" fill="#8a7d73">❯ <tspan fill="#f0b39a">/plugin install smart-model-router --marketplace </tspan><tspan fill="#f7f1ec" font-weight="700">Developer-Nijat/ai-smart-model-router</tspan></text>
+    <text x="1204" y="597" text-anchor="end" font-family="'Segoe UI', -apple-system, Arial, sans-serif" font-size="13" fill="#8a7d73">MIT · Claude Code 2.1.327+</text>
+  </g>
+</svg>
